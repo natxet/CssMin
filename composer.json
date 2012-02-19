@@ -1,5 +1,6 @@
 {
 	"name": "natxet/CssMin",
+	"version": "1.0.0",
 	"type": "library",
 	"description": "Minifying CSS",
 	"keywords": ["css","minify"],
@@ -12,7 +13,15 @@
 			"homepage": "https://profiles.google.com/joe.scylla"
 		}
 	],
+	"repositories": {
+	"Github": {
+		"vcs": {
+			"url": "git://github.com/natxet/CssMin.git"
+		}
+	}
+},
 	"require": {
 		"php": ">=5.0"
 	}
 }
+
