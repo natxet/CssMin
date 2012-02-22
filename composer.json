@@ -14,14 +14,19 @@
 		}
 	],
 	"repositories": {
-	"Github": {
-		"vcs": {
-			"url": "git://github.com/natxet/CssMin.git"
+		"Github": {
+			"vcs": {
+				"url": "git://github.com/natxet/CssMin.git"
+			}
 		}
-	}
-},
+	},
 	"require": {
 		"php": ">=5.0"
+	},
+	"autoload": {
+		"psr-0": {
+			"CssMin": "src/"
+		}
 	}
 }
 
