@@ -1,6 +1,6 @@
 {
 	"name": "natxet/CssMin",
-	"version": "1.0.0",
+	"version": "0.0.3",
 	"type": "library",
 	"description": "Minifying CSS",
 	"keywords": ["css","minify"],
