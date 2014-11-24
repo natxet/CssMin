@@ -3647,8 +3647,21 @@ class CssCompressUnitValuesMinifierPlugin extends aCssMinifierPlugin
 	(
 		"/(^| |-)0\.([0-9]+?)(0+)?(%|em|ex|px|in|cm|mm|pt|pc)/iS" => "\${1}.\${2}\${4}",
 		"/(^| )-?(\.?)0(%|em|ex|px|in|cm|mm|pt|pc)/iS" => "\${1}0",
-		"/(^0\s0\s0\s0)|(^0\s0\s0$)|(^0\s0$)/iS" => "0"
 	);
+	/**
+	 * Regular expression used for matching and replacing unit values only for non-blacklisted declarations.
+	 *
+	 * @var array
+	 */
+	private $reBlacklisted = array(
+		"/(^0\s0\s0\s0)|(^0\s0\s0$)|(^0\s0$)/iS" => "0",
+	);
+	/**
+	 * Blacklisted properties for the above regular expression.
+	 *
+	 * @var array
+	 */
+	private $propertiesBlacklist = array('background-position');
 	/**
 	 * Regular expression matching the value.
 	 *
@@ -3668,6 +3681,13 @@ class CssCompressUnitValuesMinifierPlugin extends aCssMinifierPlugin
 			foreach ($this->re as $reMatch => $reReplace)
 			{
 				$token->Value = preg_replace($reMatch, $reReplace, $token->Value);
+			}
+			if (!in_array($token->Property, $this->propertiesBlacklist))
+			{
+				foreach ($this->reBlacklisted as $reMatch => $reReplace)
+				{
+					$token->Value = preg_replace($reMatch, $reReplace, $token->Value);
+				}
 			}
 		}
 		return false;
