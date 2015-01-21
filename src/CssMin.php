@@ -4850,7 +4850,7 @@ class CssAtImportParserPlugin extends aCssParserPlugin
 			}
 			else
 			{
-				CssMin::triggerError(new CssError(__FILE__, __LINE__, __METHOD__ . ": Invalid @import at-rule syntax", $this->parser->buffer));
+				CssMin::triggerError(new CssError(__FILE__, __LINE__, __METHOD__ . ": Invalid @import at-rule syntax", $this->buffer));
 			}
 			$this->parser->popState();
 		}
