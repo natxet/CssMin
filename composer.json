@@ -1,6 +1,7 @@
 {
 	"name": "natxet/cssmin",
 	"description": "Minifying CSS",
+	"type": "library",
 	"keywords": ["css","minify"],
 	"homepage": "http://code.google.com/p/cssmin/",
 	"license": "MIT",
