@@ -493,10 +493,10 @@ class CssWhitesmithsFormatter extends aCssFormatter
 				$r[] = $this->indent . $indent . "{";
 				$level++;
 			}
-			elseif ($class == "CssAtFontFaceDeclarationToken"
+			elseif ($class === "CssAtFontFaceDeclarationToken"
 				|| $class === "CssAtKeyframesRulesetDeclarationToken"
 				|| $class === "CssAtPageDeclarationToken"
-				|| $class == "CssAtVariablesDeclarationToken"
+				|| $class === "CssAtVariablesDeclarationToken"
 				|| $class === "CssRulesetDeclarationToken"
 			)
 			{
@@ -1863,10 +1863,10 @@ class CssOtbsFormatter extends aCssFormatter
 				$r[] = $indent . implode(", ", $token->Selectors) . " {";
 				$level++;
 			}
-			elseif ($class == "CssAtFontFaceDeclarationToken"
+			elseif ($class === "CssAtFontFaceDeclarationToken"
 				|| $class === "CssAtKeyframesRulesetDeclarationToken"
 				|| $class === "CssAtPageDeclarationToken"
-				|| $class == "CssAtVariablesDeclarationToken"
+				|| $class === "CssAtVariablesDeclarationToken"
 				|| $class === "CssRulesetDeclarationToken"
 			)
 			{
