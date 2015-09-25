@@ -465,7 +465,7 @@ class CssWhitesmithsFormatter extends aCssFormatter
 			}
 			elseif ($class === "CssAtKeyframesStartToken")
 			{
-				$r[] = $indent . "@keyframes \"" . $token->Name . "\"";
+				$r[] = $indent . "@keyframes " . $token->Name;
 				$r[] = $this->indent . $indent . "{";
 				$level++;
 			}
@@ -1840,7 +1840,7 @@ class CssOtbsFormatter extends aCssFormatter
 			}
 			elseif ($class === "CssAtKeyframesStartToken")
 			{
-				$r[] = $indent . "@keyframes \"" . $token->Name . "\" {";
+				$r[] = $indent . "@keyframes " . $token->Name . " {";
 				$level++;
 			}
 			elseif ($class === "CssAtMediaStartToken")
@@ -4467,7 +4467,7 @@ class CssAtKeyframesStartToken extends aCssAtBlockStartToken
 		{
 			return "@-moz-keyframes " . $this->Name . " {";
 		}
-		return "@" . $this->AtRuleName . " \"" . $this->Name . "\"{";
+		return "@" . $this->AtRuleName . " " . $this->Name . "{";
 	}
 }
 
