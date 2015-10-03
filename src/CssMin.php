@@ -1349,7 +1349,7 @@ class CssRemoveCommentsMinifierFilter extends aCssMinifierFilter
 	 *
 	 * @var string
 	 */
-	private $whitelistPattern = '/(^\/\*!|@preserve|copyright|license|author|http:|www\.)/i';
+	private $whitelistPattern = '/(^\/\*!|@preserve|copyright|license|author|https?:|www\.)/i';
 
 	/**
 	 * Implements {@link aCssMinifierFilter::filter()}.
